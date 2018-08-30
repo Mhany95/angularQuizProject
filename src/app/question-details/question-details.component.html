@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h2>Question Details</h2>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>{{question?.question}} </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div><strong>Type:</strong> {{question?.type}}</div>
+      <div><strong>Category:</strong> {{question?.category}}</div>
+      <div><strong>Difficulty:</strong> {{question?.difficulty}}</div>
+    </div>
+  </div>
+
+  <div class="row" style="padding-top: 2%">
+    <div class="col-md-12">
+      <div><strong>Choices:</strong>
+        <ul>
+          <label *ngFor= "let choice of answers" style="margin-right: 1%">
+            {{choice}}
+          </label>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="padding-top: 2%">
+    <div class="col-md-12">
+      <div><strong>Correct answer:</strong> {{question?.correct_answer}}</div>
+    </div>
+  </div>
+</div>
